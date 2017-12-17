@@ -10,4 +10,6 @@ You have 1 minute to Cancel this process, click the Cancel Button anytime to can
 &nbsp;  
 **of course this app runs in the background.**  
 &nbsp;
--JuDaReSt
+**Change Log**  
+* 12/18/2017 Initial commit, added basic detection methods.  
+
