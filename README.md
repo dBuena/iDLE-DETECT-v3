@@ -8,4 +8,6 @@ It will also monitor if your PC is in use or Idle mode.
 Once it detects that your PC is IDLE, it will prompt you to clean up the resources automatically.  
 You have 1 minute to Cancel this process, click the Cancel Button anytime to cancel auto cleanup.  
 &nbsp;  
-**of course this app runs in the background. **
+**of course this app runs in the background.**  
+&nbsp;
+-JuDaReSt
