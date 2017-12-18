@@ -180,6 +180,12 @@ Public Class Form1
         End If
     End Sub
 
+    Sub AddAutoStartRegistry()
+        My.Computer.Registry.SetValue("HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run", _
+    Application.ProductName, _
+    Application.ExecutablePath)
+    End Sub
+
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
             'DOWNLOAD DIFINITION UPDATES
@@ -194,6 +200,9 @@ Public Class Form1
 
             'WRITE OUR INITIAL LOCAL VERSION
             CheckCFG()
+
+            AddAutoStartRegistry()
+
 
         Catch ex As Exception
 

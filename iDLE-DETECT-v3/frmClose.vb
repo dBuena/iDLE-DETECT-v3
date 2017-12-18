@@ -123,11 +123,7 @@ Public Class frmClose
 
     End Sub
 
-    Sub AddAutoStartRegistry()
-        My.Computer.Registry.SetValue("HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Run", _
-    Application.ProductName, _
-    Application.ExecutablePath)
-    End Sub
+    
 
     Private Sub frmClose_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Try
@@ -154,8 +150,7 @@ Public Class frmClose
             'PLAY SYSTEM SOUND WHEN AFK
             PlaySystemSound()
 
-            'ADD REGISTRY STARTUP
-            AddAutoStartRegistry()
+
 
         Catch ex As Exception
 
