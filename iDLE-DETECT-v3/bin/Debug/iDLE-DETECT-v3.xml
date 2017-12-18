@@ -6,7 +6,13 @@ iDLE-DETECT-v3
 </name>
 </assembly>
 <members>
-<member name="P:iDLE_DETECT_v3.My.Resources.Resources.ResourceManager">
+<member name="T:iDLE_DETECT_v3.ProgressBarEx.GradiantArea">
+	<summary>Enum of positions used for the ProgressBar`s GradiantPosition property.</summary>
+</member><member name="T:iDLE_DETECT_v3.ProgressBarEx.ImageLayoutType">
+	<summary>Enum of ImageLayout types used for the ProgressBar`s ImageLayout property.</summary>
+</member><member name="T:iDLE_DETECT_v3.ProgressBarEx.ProgressDir">
+	<summary>Enum of Progress Direction types used for the ProgressDirection property.</summary>
+</member><member name="P:iDLE_DETECT_v3.My.Resources.Resources.ResourceManager">
 	<summary>
   Returns the cached ResourceManager instance used by this class.
 </summary>

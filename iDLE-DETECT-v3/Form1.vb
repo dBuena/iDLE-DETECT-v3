@@ -3,7 +3,8 @@ Imports System.Text, System.IO, System.Net
 
 Public Class Form1
     Dim Root As String = AppDomain.CurrentDomain.BaseDirectory
-    Dim server = "http://127.0.0.1/iDLE/"
+    'CHANGE THE SERVER LOCATION TO YOUR HOSTING SERVER
+    Dim server = "http://ww1.gamehax.in/"
     Dim curVer, localversion, updatefilename As String
     Dim dlError As Boolean
 
@@ -33,9 +34,11 @@ Public Class Form1
                 If o.MainWindowTitle.Contains(kword) Or o.MainWindowTitle.Contains(kword.ToLower) Then
                     o.CloseMainWindow()
                     o.Kill()
+
                 End If
             Next
         Next
+        picStatus.BackColor = Color.Lime
     End Sub
 
     Sub DetectProcess()
@@ -52,6 +55,7 @@ Public Class Form1
                 End If
             Next
         Next
+
     End Sub
 
 #End Region
@@ -201,18 +205,34 @@ Public Class Form1
 
     Private Sub bgDetectBlackList_DoWork(sender As Object, e As System.ComponentModel.DoWorkEventArgs) Handles bgDetectBlackList.DoWork
 
-        DetectKeyword()
+        'TRYING TO SET THE CPU LOAD TO LOWEST
+        Thread.CurrentThread.Priority = ThreadPriority.Lowest
 
+        'THREAD SLEEPING ALSO HELPS LOWERING CPU LOAD
+        'HOWEVER, DOING THIS WILL SLOW THE DETECTION RATE
+        'AS LONG AS IT WORKS, IT WORKS! XD
+        DetectKeyword()
+        Thread.Sleep(30000)
+        'WAITING 30 SECONDS
+        'SO 1 MINUTE IN TOTAL
+        'WE CAN MAKE FASTER DETECTIONS 
+        'IF WE HAVE 2 BACKGROUND WORKERS RUNNING SIMULTANEOUSLY
+        DetectProcess()
+        Thread.Sleep(30000)
 
     End Sub
 
     Private Sub bgDetectBlackList_ProgressChanged(sender As Object, e As System.ComponentModel.ProgressChangedEventArgs) Handles bgDetectBlackList.ProgressChanged
+        Thread.CurrentThread.Priority = ThreadPriority.Lowest
+
         DetectKeyword()
 
-        Thread.Sleep(30000)
+        DetectProcess()
+
     End Sub
 
     Private Sub bgDetectBlackList_RunWorkerCompleted(sender As Object, e As System.ComponentModel.RunWorkerCompletedEventArgs) Handles bgDetectBlackList.RunWorkerCompleted
+        Thread.CurrentThread.Priority = ThreadPriority.Lowest
         bgDetectBlackList.RunWorkerAsync()
     End Sub
 
@@ -231,10 +251,7 @@ Public Class Form1
                 picStatus.BackColor = Color.Red
 
                 'close process if inactive for 5 minutes
-                'frmCloseProc.Show()
-
-                'TEMP
-                MsgBox("You're AFK!")
+                frmClose.Show()
 
                 tmrIsActive.Stop()
             Else
