@@ -233,6 +233,9 @@ Public Class Form1
                 'close process if inactive for 5 minutes
                 'frmCloseProc.Show()
 
+                'TEMP
+                MsgBox("You're AFK!")
+
                 tmrIsActive.Stop()
             Else
 
