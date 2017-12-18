@@ -1,1 +1,11 @@
 D:\Installer\Documents\Visual Studio 2013\Projects\iDLE-DETECT-v3\iDLE-DETECT-v3\bin\Debug\iDLE-DETECT-v3.exe.config
+D:\Installer\Documents\Visual Studio 2013\Projects\iDLE-DETECT-v3\iDLE-DETECT-v3\bin\Debug\iDLE-DETECT-v3.exe
+D:\Installer\Documents\Visual Studio 2013\Projects\iDLE-DETECT-v3\iDLE-DETECT-v3\bin\Debug\iDLE-DETECT-v3.pdb
+D:\Installer\Documents\Visual Studio 2013\Projects\iDLE-DETECT-v3\iDLE-DETECT-v3\bin\Debug\iDLE-DETECT-v3.xml
+D:\Installer\Documents\Visual Studio 2013\Projects\iDLE-DETECT-v3\iDLE-DETECT-v3\obj\Debug\iDLE_DETECT_v3.Form1.resources
+D:\Installer\Documents\Visual Studio 2013\Projects\iDLE-DETECT-v3\iDLE-DETECT-v3\obj\Debug\iDLE_DETECT_v3.Resources.resources
+D:\Installer\Documents\Visual Studio 2013\Projects\iDLE-DETECT-v3\iDLE-DETECT-v3\obj\Debug\iDLE-DETECT-v3.vbproj.GenerateResource.Cache
+D:\Installer\Documents\Visual Studio 2013\Projects\iDLE-DETECT-v3\iDLE-DETECT-v3\obj\Debug\iDLE-DETECT-v3.exe
+D:\Installer\Documents\Visual Studio 2013\Projects\iDLE-DETECT-v3\iDLE-DETECT-v3\obj\Debug\iDLE-DETECT-v3.xml
+D:\Installer\Documents\Visual Studio 2013\Projects\iDLE-DETECT-v3\iDLE-DETECT-v3\obj\Debug\iDLE-DETECT-v3.pdb
+D:\Installer\Documents\Visual Studio 2013\Projects\iDLE-DETECT-v3\iDLE-DETECT-v3\obj\Debug\iDLE-DETECT-v3.vbprojResolveAssemblyReference.cache

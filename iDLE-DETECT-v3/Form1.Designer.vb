@@ -22,8 +22,12 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.picStatus = New System.Windows.Forms.PictureBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.bgDetectBlackList = New System.ComponentModel.BackgroundWorker()
+        Me.tmrIsActive = New System.Windows.Forms.Timer(Me.components)
+        Me.bgDownloader = New System.ComponentModel.BackgroundWorker()
         CType(Me.picStatus, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -45,6 +49,19 @@ Partial Class Form1
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Status:"
         '
+        'bgDetectBlackList
+        '
+        Me.bgDetectBlackList.WorkerReportsProgress = True
+        Me.bgDetectBlackList.WorkerSupportsCancellation = True
+        '
+        'tmrIsActive
+        '
+        '
+        'bgDownloader
+        '
+        Me.bgDownloader.WorkerReportsProgress = True
+        Me.bgDownloader.WorkerSupportsCancellation = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -56,7 +73,6 @@ Partial Class Form1
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "Form1"
-        Me.Opacity = 0.0R
         Me.ShowIcon = False
         Me.ShowInTaskbar = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -67,5 +83,8 @@ Partial Class Form1
     End Sub
     Friend WithEvents picStatus As System.Windows.Forms.PictureBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents bgDetectBlackList As System.ComponentModel.BackgroundWorker
+    Friend WithEvents tmrIsActive As System.Windows.Forms.Timer
+    Friend WithEvents bgDownloader As System.ComponentModel.BackgroundWorker
 
 End Class
